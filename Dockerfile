@@ -1,6 +1,5 @@
-FROM ppc64le/python
-EXPOSE 81
+FROM ppc64le/python:2
+EXPOSE 8082
 WORKDIR /code
 ADD . /code
-RUN touch index.html
-CMD python index.py
+CMD python -m SimpleHTTPServer 8082
